@@ -4,12 +4,14 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "cors-server": "node node_modules/cors-anywhere/server.js ",
+    "dev": "yarn cors-server & vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "cors-anywhere": "^0.4.4",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
