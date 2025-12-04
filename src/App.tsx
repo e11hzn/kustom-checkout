@@ -36,7 +36,7 @@ interface KustomOrderResponse {
 
 const KUSTOM_USERNAME = 'PM00512798-E41ai';
 const KUSTOM_PASSWORD = 'kco_test_api_5GFOyq6RdYEPXxG4F9VBg0Yp0dKcOoHD';
-const DEV_CORS_PRE_API_URL = location.hostname === 'localhost' ? 'http://localhost:8080/' : '';
+const DEV_CORS_PRE_API_URL = 'https://cors-anywhere.herokuapp.com/';
 const API_URL = `${DEV_CORS_PRE_API_URL}https://api.playground.kustom.co/checkout/v3/orders`; // Playground URL
 
 const CheckoutPage: React.FC = () => {
