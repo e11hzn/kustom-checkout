@@ -19,6 +19,7 @@ interface MerchantUrls {
 }
 
 interface OrderPayload {
+  options: Record<string, unknown>,
   purchase_country: string;
   purchase_currency: string;
   locale: string;
@@ -67,6 +68,9 @@ const CheckoutPage: React.FC = () => {
     // Price: 100.00 SEK (represented as 10000 minor units)
     // Tax: 25% (20.00 SEK tax included)
     const orderPayload: OrderPayload = {
+      options: {
+        allow_separate_shipping_address: true,
+      },
       purchase_country: 'SE',
       purchase_currency: 'SEK',
       locale: 'sv-se',
